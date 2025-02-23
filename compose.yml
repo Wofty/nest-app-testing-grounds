@@ -28,7 +28,6 @@ services:
   db:
     image: postgres:latest
     container_name: ${POSTGRES_CONTAINER_NAME}
-    restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -43,7 +42,6 @@ services:
   adminer:
     image: adminer:latest
     container_name: ${ADMINER_CONTAINER_NAME}
-    restart: always
     networks:
       - app-network
     ports:
